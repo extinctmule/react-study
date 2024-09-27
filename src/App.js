@@ -28,9 +28,6 @@ function App() {
 
   return (
     <div className="App">
-      <div class="black-nav">
-        <h4 style={{ fontSize: "20px" }}>블로그</h4>
-      </div>
       <button onClick={onClickSort}>정렬</button>
       <div className="list">
         <h4>
@@ -46,8 +43,19 @@ function App() {
         <h4>{title[2]}</h4>
         <p>{contents[2]}</p>
       </div>
+      <Modal />
     </div>
   );
 }
+
+const Modal = () => {
+  return (
+    <div className="modal">
+      <h4>제목</h4>
+      <p>날짜</p>
+      <p>상세내용</p>
+    </div>
+  );
+};
 
 export default App;
