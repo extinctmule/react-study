@@ -27,8 +27,15 @@ function App() {
 
   return (
     <div className="App">
+      <div className="black-nav">
+        <h4>블로그</h4>
+      </div>
       <button onClick={onClickSort}>정렬</button>
       <div className="list">
+        {[title, contents].map(function () {
+          console.log(this);
+          return <div>{this}</div>;
+        })}
         <h4>
           {title[0]} <span onClick={onClickLikes}>👍</span> {likes}
         </h4>
